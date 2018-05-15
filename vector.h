@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <assert.h>
+#include <time.h>
 
 #include "vector.h"
 #include "matrix.h"
@@ -18,7 +19,8 @@ typedef struct Vector
 
 Vector create_vector(int Vec_Len);
 Vector constant_vector(int Vec_Len, float val);
-Vector random_vector(int Vec_Len);
+Vector random_vector_normalized(int Vec_Len);
+Vector random_vector_ranged(int Vec_Len, int Max_Val, int Min_Val);
 void print_vector(Vector *Vec);
 void print_vector_dim(Vector *Vec);
 void free_vector(Vector *Vec);

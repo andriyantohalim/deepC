@@ -32,7 +32,7 @@ Matrix constant_matrix(int Mat_Row, int Mat_Col, float val)
     return tempMat;
 }
 
-Matrix random_matrix(int Mat_Row, int Mat_Col)
+Matrix random_matrix_normalized(int Mat_Row, int Mat_Col)
 {
     Matrix tempMat = create_matrix(Mat_Row, Mat_Col);
     
@@ -40,7 +40,22 @@ Matrix random_matrix(int Mat_Row, int Mat_Col)
     {
         for (int j = 0; j < Mat_Col; j++)
         {
-            *(tempMat.vals[i] + j) = 2*i+j+1.3;
+            *(tempMat.vals[i] + j) = (float)(rand())/RAND_MAX;
+        }
+    }
+    
+    return tempMat;
+}
+
+Matrix random_matrix_ranged(int Mat_Row, int Mat_Col, int Max_Val, int Min_Val)
+{
+    Matrix tempMat = create_matrix(Mat_Row, Mat_Col);
+    
+    for (int i = 0; i < Mat_Row; i++)
+    {
+        for (int j = 0; j < Mat_Col; j++)
+        {
+            *(tempMat.vals[i] + j) = (float)(((rand()) % (Max_Val - Min_Val + 1)) + Min_Val);
         }
     }
     

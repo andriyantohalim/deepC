@@ -23,13 +23,29 @@ Vector constant_vector(int Vec_Len, float val)
 	return tempVec;
 }
 
-Vector random_vector(int Vec_Len)
+Vector random_vector_normalized(int Vec_Len)
 {
 	Vector tempVec = create_vector(Vec_Len);
 	
+	srand(time(NULL));
+	
 	for (int i = 0; i < Vec_Len; i++)
 	{
-		tempVec.vals[i] = 2*i+1.3;
+		tempVec.vals[i] = (float)(rand())/RAND_MAX;
+	}
+	
+	return tempVec;
+}
+
+Vector random_vector_ranged(int Vec_Len, int Max_Val, int Min_Val)
+{
+	Vector tempVec = create_vector(Vec_Len);
+	
+	srand(time(NULL));
+	
+	for (int i = 0; i < Vec_Len; i++)
+	{
+		tempVec.vals[i] = (float)(((rand()) % (Max_Val - Min_Val + 1)) + Min_Val);
 	}
 	
 	return tempVec;

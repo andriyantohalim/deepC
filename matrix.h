@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <assert.h>
+#include <time.h>
 
 #include "vector.h"
 #include "matrix.h"
@@ -18,7 +19,8 @@ typedef struct Matrix
 
 Matrix create_matrix(int Mat_Row, int Mat_Col);
 Matrix constant_matrix(int Mat_Row, int Mat_Col, float val);
-Matrix random_matrix(int Mat_Row, int Mat_Col);
+Matrix random_matrix_normalized(int Mat_Row, int Mat_Col);
+Matrix random_matrix_ranged(int Mat_Row, int Mat_Col, int Max_Val, int Min_Val);
 void print_matrix(Matrix *Mat);
 void print_matrix_dim(Matrix *Mat);
 void free_matrix(Matrix *Mat);

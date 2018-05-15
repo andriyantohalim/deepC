@@ -41,7 +41,7 @@ Tensor constant_tensor(int Tsr_Row, int Tsr_Col, int Tsr_Depth, float val)
     return tempTensor;
 }
 
-Tensor random_tensor(int Tsr_Row, int Tsr_Col, int Tsr_Depth)
+Tensor random_tensor_normalized(int Tsr_Row, int Tsr_Col, int Tsr_Depth)
 {
     Tensor tempTensor = create_tensor(Tsr_Row, Tsr_Col, Tsr_Depth);
     
@@ -51,7 +51,25 @@ Tensor random_tensor(int Tsr_Row, int Tsr_Col, int Tsr_Depth)
 		{
 			for (int j = 0; j < Tsr_Col; j++)
 			{
-				tempTensor.vals[k][i][j] = i + j + k + 2*i + 0.5*j + 0.3*k + 2.12f;
+				tempTensor.vals[k][i][j] = (float)(rand())/RAND_MAX;
+			}
+		}
+	}
+    
+    return tempTensor;
+}
+ 
+Tensor random_tensor_ranged(int Tsr_Row, int Tsr_Col, int Tsr_Depth, int Max_Val, int Min_Val)
+{
+    Tensor tempTensor = create_tensor(Tsr_Row, Tsr_Col, Tsr_Depth);
+    
+    for (int k = 0; k < Tsr_Depth; k++)
+    {
+		for (int i = 0; i < Tsr_Row; i++)
+		{
+			for (int j = 0; j < Tsr_Col; j++)
+			{
+				tempTensor.vals[k][i][j] = (float)(((rand()) % (Max_Val - Min_Val + 1)) + Min_Val);
 			}
 		}
 	}

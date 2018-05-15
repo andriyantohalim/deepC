@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <assert.h>
+#include <time.h>
 
 #include "vector.h"
 #include "matrix.h"
@@ -18,7 +19,8 @@ typedef struct Tensor
 
 Tensor create_tensor(int Tsr_Row, int Tsr_Col, int Tsr_Depth);
 Tensor constant_tensor(int Tsr_Row, int Tsr_Col, int Tsr_Depth, float val);
-Tensor random_tensor(int Tsr_Row, int Tsr_Col, int Tsr_Depth);
+Tensor random_tensor_normalized(int Tsr_Row, int Tsr_Col, int Tsr_Depth);
+Tensor random_tensor_ranged(int Tsr_Row, int Tsr_Col, int Tsr_Depth, int Max_Val, int Min_Val);
 void print_tensor(Tensor *Tsr);
 void print_tensor_dim(Tensor *Tsr);
 void free_tensor(Tensor *Tsr);
