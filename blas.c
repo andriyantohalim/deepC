@@ -1,3 +1,47 @@
+/****************************************************************************
+ *                                                                          *
+ * 	DeepC: Deep Learning/Machine Learning Inference Library written in C 	*
+ * 																			*
+ * 	Copyright (C) 2018 by Andriyanto Halim          						*
+ *                                                                          *
+ *  This program is free software: you can redistribute it and/or modify	*
+ *  it under the terms of the GNU General Public License as published by	*
+ *  the Free Software Foundation, either version 3 of the License, or		*
+ *  (at your option) any later version.										*
+ *                                                                          *
+ *  This program is distributed in the hope that it will be useful,        	*
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of        	*
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          	*
+ *  GNU Lesser General Public License for more details.                    	*
+ *                                                                         	*
+ *  You should have received a copy of the GNU Lesser General Public       	*
+ *  License along with this program. If not, see							*
+ *  <http://www.gnu.org/licenses/>. 										*
+ * 																			*
+ ****************************************************************************/
+  
+/**
+ * @file blas.c
+ * @brief Source file on detailed implementation for BLAS (Basic Linear Algebra Subprograms)
+ *
+ * Basic Linear Algebra Subprograms (BLAS) consists of a set of low-level functions
+ * for performing linear algebra operations.\n 
+ * There are some other open-source implementation such as OpenBLAS, Armadillo, etc.
+ * but it is not included here to remove dependencies and maintain datatype compatiblity.
+ * 
+ * @author Andriyanto Halim
+ * @date 16 May 2018
+ * 
+ * @todo 
+ * 1. Implement more BLAS functions
+ * 2. implement OpenMP implementation for parallelism
+ * 3. Implement various CPU architectures' SIMD instruction, i.e. AVX/AVX2 (x86), NEON (ARM)
+ * 
+ * @bug No known bugs
+ * 
+ * @see https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms
+ */
+ 
 #include "blas.h"
 
 Vector scale_Vec_wCPU(Vector *Vec_In, float scaling_factor)

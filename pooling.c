@@ -1,3 +1,45 @@
+/****************************************************************************
+ *                                                                          *
+ * 	DeepC: Deep Learning/Machine Learning Inference Library written in C 	*
+ * 																			*
+ * 	Copyright (C) 2018 by Andriyanto Halim          						*
+ *                                                                          *
+ *  This program is free software: you can redistribute it and/or modify	*
+ *  it under the terms of the GNU General Public License as published by	*
+ *  the Free Software Foundation, either version 3 of the License, or		*
+ *  (at your option) any later version.										*
+ *                                                                          *
+ *  This program is distributed in the hope that it will be useful,        	*
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of        	*
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          	*
+ *  GNU Lesser General Public License for more details.                    	*
+ *                                                                         	*
+ *  You should have received a copy of the GNU Lesser General Public       	*
+ *  License along with this program. If not, see							*
+ *  <http://www.gnu.org/licenses/>. 										*
+ * 																			*
+ ****************************************************************************/
+  
+/**
+ * @file pooling.c
+ * @brief Source file on detailed implementation for pooling functions
+ *
+ * Pooling is a method of downsampling the layer in a non-linear fashion.\n
+ * Only max-pooling is supported in this implementation as it is the most 
+ * common one found in deep learning networks.
+ * 
+ * @author Andriyanto Halim
+ * @date 16 May 2018
+ * 
+ * @todo
+ * 1. Parallelism
+ * 
+ * @bug No known bugs
+ * 
+ * @see
+ * 1. https://en.wikipedia.org/wiki/Convolutional_neural_network#Pooling_layer
+ */
+ 
 #include "pooling.h"
 
 Matrix maxpooling_Mat_wCPU(Matrix *Mat_In, int filter_height, int filter_width, int stride)

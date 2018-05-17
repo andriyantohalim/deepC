@@ -1,3 +1,46 @@
+/****************************************************************************
+ *                                                                          *
+ * 	DeepC: Deep Learning/Machine Learning Inference Library written in C 	*
+ * 																			*
+ * 	Copyright (C) 2018 by Andriyanto Halim          						*
+ *                                                                          *
+ *  This program is free software: you can redistribute it and/or modify	*
+ *  it under the terms of the GNU General Public License as published by	*
+ *  the Free Software Foundation, either version 3 of the License, or		*
+ *  (at your option) any later version.										*
+ *                                                                          *
+ *  This program is distributed in the hope that it will be useful,        	*
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of        	*
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          	*
+ *  GNU Lesser General Public License for more details.                    	*
+ *                                                                         	*
+ *  You should have received a copy of the GNU Lesser General Public       	*
+ *  License along with this program. If not, see							*
+ *  <http://www.gnu.org/licenses/>. 										*
+ * 																			*
+ ****************************************************************************/
+  
+/**
+ * @file statistics.c
+ * @brief Source file on detailed implementation for statistics functions
+ *
+ * Some statistical operations such as means, variance and standard deviation are 
+ * needed in deep learning/machine learning processes in order to perform normalization.
+ * 
+ * @author Andriyanto Halim
+ * @date 16 May 2018
+ * 
+ * @todo 
+ * 1. To implement more statistics functions relevant to deep learning/machine learning
+ * 
+ * @bug No known bugs
+ * 
+ * @see 
+ * 1. https://en.wikipedia.org/wiki/Mean
+ * 2. https://en.wikipedia.org/wiki/Standard_deviation
+ * 3. https://en.wikipedia.org/wiki/Normalization_(statistics)
+ */
+ 
 #include "statistics.h"
 
 float mean_Vec_wCPU(Vector *Vec_In)

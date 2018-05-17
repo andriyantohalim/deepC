@@ -1,3 +1,49 @@
+/****************************************************************************
+ *                                                                          *
+ * 	DeepC: Deep Learning/Machine Learning Inference Library written in C 	*
+ * 																			*
+ * 	Copyright (C) 2018 by Andriyanto Halim          						*
+ *                                                                          *
+ *  This program is free software: you can redistribute it and/or modify	*
+ *  it under the terms of the GNU General Public License as published by	*
+ *  the Free Software Foundation, either version 3 of the License, or		*
+ *  (at your option) any later version.										*
+ *                                                                          *
+ *  This program is distributed in the hope that it will be useful,        	*
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of        	*
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          	*
+ *  GNU Lesser General Public License for more details.                    	*
+ *                                                                         	*
+ *  You should have received a copy of the GNU Lesser General Public       	*
+ *  License along with this program. If not, see							*
+ *  <http://www.gnu.org/licenses/>. 										*
+ * 																			*
+ ****************************************************************************/
+  
+/**
+ * @file padding.c
+ * @brief Source file on detailed implementation for implementing zero padding
+ *
+ * Paddings are usually needed for certain operations such as convolution and pooling.\n
+ * In convolution, padding is introduced in the input matrix/tensor in order to perform
+ * Same Convolution, i.e. output matrix/tensor dimension is the same to the input
+ * matrix/tensor.\n
+ * In pooling operation, it is possible for the pooling kernel to mismatch the 
+ * input matrix/tensor dimension. Introducing some asymmetric padding will prevent the
+ * rogue pointers from happening.
+ * 
+ * @author Andriyanto Halim
+ * @date 16 May 2018
+ * 
+ * @todo
+ * 1. Change function name to indicate "symmetric"
+ * 
+ * @bug No known bugs
+ * 
+ * @see 
+ * 1. https://en.wikipedia.org/wiki/Convolutional_neural_network#Pooling_layer
+ */
+ 
 #include "padding.h"
 
 Vector padding_asymmetric_Vec_wCPU(Vector *Vec_In, int padsize)

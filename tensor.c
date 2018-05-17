@@ -1,3 +1,42 @@
+/****************************************************************************
+ *                                                                          *
+ * 	DeepC: Deep Learning/Machine Learning Inference Library written in C 	*
+ * 																			*
+ * 	Copyright (C) 2018 by Andriyanto Halim          						*
+ *                                                                          *
+ *  This program is free software: you can redistribute it and/or modify	*
+ *  it under the terms of the GNU General Public License as published by	*
+ *  the Free Software Foundation, either version 3 of the License, or		*
+ *  (at your option) any later version.										*
+ *                                                                          *
+ *  This program is distributed in the hope that it will be useful,        	*
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of        	*
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          	*
+ *  GNU Lesser General Public License for more details.                    	*
+ *                                                                         	*
+ *  You should have received a copy of the GNU Lesser General Public       	*
+ *  License along with this program. If not, see							*
+ *  <http://www.gnu.org/licenses/>. 										*
+ * 																			*
+ ****************************************************************************/
+ 
+/**
+ * @file tensor.c
+ * @brief Source file on detailed implementation for tensor related functions
+ *
+ * Collection of functions for tensor operations
+ * 
+ * @author Andriyanto Halim
+ * @date 16 May 2018
+ * 
+ * @todo 
+ * 1. change tensor length from "int" to "unsigned int"
+ * 
+ * @bug No known bugs
+ * 
+ * @see https://en.wikipedia.org/wiki/Array_data_structure
+ */
+ 
 #include "tensor.h"
 
 Tensor create_tensor(int Tsr_Row, int Tsr_Col, int Tsr_Depth)
