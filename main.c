@@ -50,7 +50,7 @@ float sigmoid_Scl_wCPU(float Scl_In)
 }
 
 int main(void)
-{    	
+{    	 
 	float X[3] = {-0.0002075f, -0.00021f, 0.020034f};
 	float Y = 1.0f;
 	
